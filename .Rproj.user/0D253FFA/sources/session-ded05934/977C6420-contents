@@ -14,7 +14,7 @@ library(igraph)
 # 1
 
 ```{r}
-edgelist <- read_csv('large_twitch_edges.csv')
+edgelist <- read_csv('large_twitch_edges.csv', show_col_types = FALSE)
 
 features <- read_csv(
   'large_twitch_features.csv',
@@ -27,15 +27,7 @@ features <- read_csv(
 edgelist <- matrix(unlist(edgelist), ncol = 2) + 1
 features$numeric_id <- features$numeric_id + 1 
 
-g <- graph_from_edgelist(edgelist, directed = FALSE)
-```
-
-```{r}
-mat <- as_adjacency_matrix(g, sparse = TRUE)
-```
-
-```{r}
-g <- g %>% 
+g <- graph_from_edgelist(edgelist, directed = FALSE) %>% 
   set_vertex_attr(name = 'views', value = features$views) %>% 
   set_vertex_attr(name = 'mature', value = features$mature) %>% 
   set_vertex_attr(name = 'life_time', value = features$life_time) %>% 
@@ -64,11 +56,6 @@ sg4 <- induced_subgraph(g, vids = vert_10000)
 ```
 
 ```{r}
-sg1
-V(sg1)$deg <- degree(sg1)
-```
-
-```{r}
 par(mar = c(0, 0, 0, 0))
 plot(sg1, vertex.size = 2.5, vertex.label = NA, layout = layout_on_sphere, edge.width = NA)
 ```
@@ -82,6 +69,7 @@ plot(sg2, vertex.size = 2.5, vertex.label = NA, layout = layout_on_sphere)
 par(mar = c(0, 0, 0, 0))
 plot(sg3, vertex.size = 4, vertex.label = NA, layout = layout_in_circle)
 ```
+
 ```{r}
 par(mar = c(0, 0, 0, 0))
 plot(sg4, vertex.size = 5, vertex.label = NA, layout = layout.circle)

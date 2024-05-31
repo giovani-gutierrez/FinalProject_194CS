@@ -1,4 +1,0 @@
-"0","sg1 <- induced_subgraph(g, vids = vert_2500)"
-"0","sg2 <- induced_subgraph(g, vids = vert_5000)"
-"0","sg3 <- induced_subgraph(g, vids = vert_7500)"
-"0","sg4 <- induced_subgraph(g, vids = vert_10000)"

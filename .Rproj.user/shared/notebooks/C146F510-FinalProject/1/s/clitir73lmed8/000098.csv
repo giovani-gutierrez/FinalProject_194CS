@@ -1,2 +1,0 @@
-"0","par(mar = c(0, 0, 0, 0))"
-"0","plot(sg1, vertex.size = 2.5, vertex.label = NA, layout = layout_on_sphere, edge.width = NA)"
