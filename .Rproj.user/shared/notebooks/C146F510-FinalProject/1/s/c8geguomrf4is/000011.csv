@@ -1,0 +1,7 @@
+"0","g <- g %>% "
+"0","  set_vertex_attr(name = 'views', value = features$views) %>% "
+"0","  set_vertex_attr(name = 'mature', value = features$mature) %>% "
+"0","  set_vertex_attr(name = 'life_time', value = features$life_time) %>% "
+"0","  set_vertex_attr(name = 'dead_account', value = features$dead_account) %>% "
+"0","  set_vertex_attr(name = 'language', value = features$language) %>% "
+"0","  set_vertex_attr(name = 'affiliate', value = features$affiliate)"

@@ -1,0 +1,4 @@
+"0","edgelist <- matrix(unlist(edgelist), ncol = 2) + 1"
+"0","features$numeric_id <- features$numeric_id + 1 "
+"0",""
+"0","g <- graph_from_edgelist(edgelist, directed = FALSE)"

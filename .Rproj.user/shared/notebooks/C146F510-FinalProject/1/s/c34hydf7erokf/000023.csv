@@ -1,0 +1,2 @@
+"0","par(mar = c(0, 0, 0, 0))"
+"0","plot(sg4, vertex.size = 5, vertex.label = NA, layout = layout.circle)"
